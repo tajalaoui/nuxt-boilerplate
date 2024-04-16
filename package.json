@@ -11,14 +11,17 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "@nuxt/eslint": "^0.3.7",
+    "@vite-pwa/nuxt": "^0.6.0",
     "nuxt": "^3.11.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "vite-plugin-vuetify": "^2.0.3",
-    "vuetify": "^3.5.15",
+    "@nuxtjs/fontaine": "^0.4.1",
     "material-design-icons-iconfont": "^6.7.0",
-    "sass": "^1.74.1"
+    "sass": "^1.74.1",
+    "vite-plugin-vuetify": "^2.0.3",
+    "vuetify": "^3.5.15"
   }
 }
