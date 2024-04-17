@@ -15,9 +15,27 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify({ autoImport: true }));
       });
     },
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          // Raleway: {
+          //   wght: [100, 400],
+          //   ital: [100],
+          // },
+          Inter: "300..700",
+          Syne: "400..700",
+        },
+      },
+    ],
     "@nuxtjs/fontaine",
     "@nuxt/eslint",
+    // "@nuxtjs/stylelint-module",
+    // "@nuxt/image",
   ],
+  // image: {
+  //   quality: 80,
+  // },
   vite: {
     vue: {
       template: {
@@ -25,52 +43,4 @@ export default defineNuxtConfig({
       },
     },
   },
-  // pwa: {
-  //   strategies: sw ? "injectManifest" : "generateSW",
-  //   srcDir: sw ? "service-worker" : undefined,
-  //   filename: sw ? "sw.ts" : undefined,
-  //   registerType: "autoUpdate",
-  //   manifest: {
-  //     name: "Nuxt Vite PWA",
-  //     short_name: "NuxtVitePWA",
-  //     theme_color: "#1e1e1e",
-  //     icons: [
-  //       {
-  //         src: "pwa-192x192.png",
-  //         sizes: "192x192",
-  //         type: "image/png",
-  //       },
-  //       {
-  //         src: "pwa-512x512.png",
-  //         sizes: "512x512",
-  //         type: "image/png",
-  //       },
-  //       {
-  //         src: "pwa-512x512.png",
-  //         sizes: "512x512",
-  //         type: "image/png",
-  //         purpose: "any maskable",
-  //       },
-  //     ],
-  //   },
-  //   workbox: {
-  //     globPatterns: ["**/*.{js,css,html,png,svg,ico}"],
-  //   },
-  //   injectManifest: {
-  //     globPatterns: ["**/*.{js,css,html,png,svg,ico}"],
-  //   },
-  //   client: {
-  //     installPrompt: true,
-  //     // you don't need to include this: only for testing purposes
-  //     // if enabling periodic sync for update use 1 hour or so (periodicSyncForUpdates: 3600)
-  //     periodicSyncForUpdates: 20,
-  //   },
-  //   devOptions: {
-  //     enabled: true,
-  //     suppressWarnings: true,
-  //     navigateFallback: "/",
-  //     navigateFallbackAllowlist: [/^\/$/],
-  //     type: "module",
-  //   },
-  // },
 });

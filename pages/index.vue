@@ -1,9 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <v-conatiner>
+  <v-container>
     <v-card><v-card-title>Hello world!</v-card-title></v-card>
-  </v-conatiner>
+  </v-container>
 </template>
 
 <style></style>
