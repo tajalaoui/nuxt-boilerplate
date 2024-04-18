@@ -1,4 +1,6 @@
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
+import { pwa } from "./config/pwa";
+import { appDescription } from "./constants/index";
 
 const sw = process.env.SW === "true";
 
@@ -30,12 +32,14 @@ export default defineNuxtConfig({
     ],
     "@nuxtjs/fontaine",
     "@nuxt/eslint",
+    "@vite-pwa/nuxt",
     // "@nuxtjs/stylelint-module",
     // "@nuxt/image",
   ],
   // image: {
   //   quality: 80,
   // },
+  pwa,
   vite: {
     vue: {
       template: {
