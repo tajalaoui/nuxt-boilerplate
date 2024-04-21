@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     "@nuxtjs/fontaine",
     "@nuxt/eslint",
     "@vite-pwa/nuxt",
+    "@nuxtjs/partytown",
     // "@nuxtjs/stylelint-module",
     // "@nuxt/image",
   ],
