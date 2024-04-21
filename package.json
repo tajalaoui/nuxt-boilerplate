@@ -2,6 +2,7 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
+  "author": "Tajeddine Zemzmi Alaoui",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
