@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtPage />
+    <NuxtLayout><NuxtPage /></NuxtLayout>
   </div>
 </template>
 
@@ -8,6 +8,4 @@
 body {
   font-family: "Inter", sans-serif !important;
 }
-
-
 </style>
