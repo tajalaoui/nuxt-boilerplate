@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/eslint",
     "@nuxtjs/seo",
+    "nuxt-security",
   ],
   primevue: {
     autoImport: true,
@@ -34,5 +35,12 @@ export default defineNuxtConfig({
     name: "Awesome Site",
     description: "Welcome to my awesome site!",
     defaultLocale: "en",
+  },
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy:
+        // TODO Add .env var
+        process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
+    },
   },
 });
