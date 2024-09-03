@@ -1,13 +1,10 @@
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div>
+    <AppBar />
     <slot />
   </div>
 </template>
 
-<style>
-
-</style>
+<style></style>

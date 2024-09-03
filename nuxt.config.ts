@@ -14,6 +14,9 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxtjs/seo",
     "nuxt-security",
+    "@nuxt/icon",
+    "nuxt-booster",
+    "@nuxtjs/i18n",
   ],
   primevue: {
     autoImport: true,
@@ -32,9 +35,24 @@ export default defineNuxtConfig({
   },
   site: {
     url: "https://example.com",
-    name: "Awesome Site",
+    name: "Nuxt.js",
     description: "Welcome to my awesome site!",
     defaultLocale: "en",
+  },
+  i18n: {
+    lazy: true,
+    langDir: "locales",
+    locales: [
+      { code: "en", language: "en-US", name: "English", file: "en-US.json" },
+    ],
+    defaultLocale: "en-US",
+    strategy: "no_prefix",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      alwaysRedirect: true,
+      fallbackLocale: "en",
+    },
   },
   security: {
     headers: {
