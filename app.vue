@@ -5,7 +5,7 @@
 </template>
 
 <style>
-body {
+/* body {
   font-family: "Inter", sans-serif !important;
 }
 
@@ -23,5 +23,5 @@ li,
 figcaption {
   text-wrap: pretty;
   max-width: 65ch;
-}
+} */
 </style>

@@ -16,7 +16,9 @@ export default defineNuxtConfig({
     "nuxt-security",
     "@nuxt/icon",
     "nuxt-booster",
-    "@nuxtjs/i18n",
+    // "@nuxtjs/i18n",
+    "nuxt-delay-hydration",
+    "@nuxtjs/partytown",
   ],
   primevue: {
     autoImport: true,
@@ -29,9 +31,13 @@ export default defineNuxtConfig({
     // importPT: { from: path.resolve(__dirname, "./presets/aura/") },
     importPT: { as: "Aura", from: "~/presets/aura" }, // for windows
   },
-  css: ["primeicons/primeicons.css", "./assets/css/tailwind.css"],
+  css: ["./assets/css/base.scss", "primeicons/primeicons.css", "./assets/css/tailwind.css"],
   image: {
-    quality: 80,
+    defaults: {
+      loading: "lazy",
+      quality: 80, // Adjust image quality
+      format: "webp", // Use WebP for smaller image sizes
+    },
   },
   site: {
     url: "https://example.com",
@@ -39,21 +45,21 @@ export default defineNuxtConfig({
     description: "Welcome to my awesome site!",
     defaultLocale: "en",
   },
-  i18n: {
-    lazy: true,
-    langDir: "locales",
-    locales: [
-      { code: "en", language: "en-US", name: "English", file: "en-US.json" },
-    ],
-    defaultLocale: "en-US",
-    strategy: "no_prefix",
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "i18n_redirected",
-      alwaysRedirect: true,
-      fallbackLocale: "en",
-    },
-  },
+  // i18n: {
+  //   lazy: true,
+  //   langDir: "locales",
+  //   locales: [
+  //     { code: "en", language: "en-US", name: "English", file: "en-US.json" },
+  //   ],
+  //   defaultLocale: "en-US",
+  //   strategy: "no_prefix",
+  //   detectBrowserLanguage: {
+  //     useCookie: true,
+  //     cookieKey: "i18n_redirected",
+  //     alwaysRedirect: true,
+  //     fallbackLocale: "en",
+  //   },
+  // },
   security: {
     headers: {
       crossOriginEmbedderPolicy:
