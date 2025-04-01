@@ -15,7 +15,6 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "nuxt-security",
     "@nuxt/icon",
-    "nuxt-booster",
     // "@nuxtjs/i18n",
     "nuxt-delay-hydration",
     "@nuxtjs/partytown",
